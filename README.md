@@ -1,18 +1,24 @@
-# Getting Started with Create React App
+# Empezar con Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue iniciado con [Create React App](https://github.com/facebook/create-react-app).\
+Para los estilos de CSS se esta utilizando el framework **Tailwind**. 
 
-## Available Scripts
+## Para mas información sobre Tailwind visita: 
+[https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation)
 
-In the project directory, you can run:
+## Scripts disponibles
+
+En el directorio del proyecto, puede ejecutar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta la aplicación en el modo de desarrollo.\
+Abre [http://localhost:3000](http://localhost:3000) para verlo en tu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La pagina se actualizara cuando hagas cambios.\
+También puede ver errores en la consola.
+
+## De momento esto no se utiliza:
 
 ### `npm test`
 
