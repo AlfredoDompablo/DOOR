@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Filters from "./components/Filters";
 // import Slide from "./components/Slide";
-import Form from "./components/Form";
+// import Form from "./components/Form";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <Filters />
     {/*carrusel*/}
     {/* <Slide /> */}
-    <Form />
+    {/* <Form /> */}
     {/*cards*/}
     {/*footer*/}
   </div>

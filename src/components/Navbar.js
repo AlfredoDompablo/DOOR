@@ -1,8 +1,11 @@
 import React from 'react'
+// import { Button } from "@material-tailwind/react";
+import Form from "./Form";
 import logo from '../assets/Logob.png'
 import logo2 from '../assets/Logow.png'
 // import logow from '../assets/LogoDoor_W.png'
-import { BiWorld, BiUser } from "react-icons/bi";
+// import { BiWorld, BiUser } from "react-icons/bi";
+import { BiWorld } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
 const Navbar = () => {
   return (
@@ -17,7 +20,7 @@ const Navbar = () => {
         {/* Middle */}
         <div className="hidden lg:flex justify-center items-center relative shadow-sm  border rounded-full dark:bg-white ">
           <input
-            type="search"
+            type="search" 
             placeholder=""
             className="py-2.5 w-[20rem] rounded-full outline-0"
           />
@@ -38,10 +41,12 @@ const Navbar = () => {
             <div className="">EN</div>
           </div>
 
-          <div className="flex items-center border px-3 py-2 rounded-full gap-2 bg-[#ff5a60] text-white font-bold shadow-lg  hover:bg-[#f9787c] duration-100 ease-out">
+          {/* <div className="flex items-center border px-3 py-2 rounded-full gap-2 bg-[#ff5a60] text-white font-bold shadow-lg  hover:bg-[#f9787c] duration-100 ease-out">
             <p>Sign in</p>
             <BiUser className="text-[22px]" />
-          </div>
+          </div> */}
+          {/* <Button  className="flex items-center rounded-full px-3 py-2 gap-2 bg-[#ff5a60] text-white font-bold shadow-lg  hover:bg-[#f9787c] duration-100 ease-out">Sign In <BiUser className="text-[22px]" /></Button> */}
+          <Form/>
         </div>
       </div>
     </div>

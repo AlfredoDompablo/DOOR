@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+import {BiUser } from "react-icons/bi";
 import {
   Button,
   Dialog,
@@ -14,35 +16,51 @@ import {
 export default function Form() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const mostrarDatos =()=>{
+    alert(email + password);
+  }
  
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>Sign In</Button>
+      {/* <Button onClick={handleOpen} className="rounded-full">Sign In</Button> */}
+      <Button onClick={handleOpen} className="flex items-center rounded-full px-3 py-2 gap-2 bg-[#ff5a60] text-white font-bold shadow-lg  hover:bg-[#f9787c] duration-100 ease-out">Sign In <BiUser className="text-[22px]" /></Button>
+
       <Dialog
-        size="xs"
+        
         open={open}
         handler={handleOpen}
-        className="bg-transparent shadow-none"
+        className="bg-transparent shadow-none flex sm:flex-none items-center justify-center"
       >
-        <Card className="mx-auto w-full max-w-[24rem]">
+        <div>
+          
+        <Card className="">
           <CardHeader
             variant="gradient"
-            color="blue"
-            className="mb-4 grid h-28 place-items-center"
+            className="mb-4 grid h-28 place-items-center bg-primario"
           >
             <Typography variant="h3" color="white">
               Sign In
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
-            <Input label="Email" size="lg" />
-            <Input label="Password" size="lg" />
+            <Input color="black" type="email" label="Email" size="md" className="" 
+            onChange={(event)=>{
+              setEmail(event.target.value);
+            }}/>
+            <Input color="black" type="password" label="Password" size="lg"
+            onChange={(event)=>{
+              setPassword(event.target.value);
+            }} />
             <div className="-ml-2.5">
-              <Checkbox label="Remember Me" />
+              <Checkbox color="deep-orange" label="Remember Me" />
             </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button variant="gradient" onClick={handleOpen} fullWidth>
+            <Button onClick={mostrarDatos} className="bg-[#ff5a60] text-white font-bold shadow-lg  hover:bg-[#f9787c] duration-100 ease-out"   fullWidth >
               Sign In
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
@@ -60,6 +78,7 @@ export default function Form() {
             </Typography>
           </CardFooter>
         </Card>
+        </div>
       </Dialog>
     </React.Fragment>
   );
