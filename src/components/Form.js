@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import {BiUser } from "react-icons/bi";
+import axios from "axios";
+
 import {
   Button,
   Dialog,
@@ -20,8 +22,13 @@ export default function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const mostrarDatos =()=>{
-    alert(email + password);
+  const addUser =()=>{
+    axios.post("http://localhost:3001/create",{
+      email:email,
+      password:password
+    }).then(()=>{
+      alert("Binvenido");
+    })
   }
  
   return (
@@ -47,11 +54,11 @@ export default function Form() {
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
-            <Input color="black" type="email" label="Email" size="md" className="" 
+            <Input color="black" type="email" label="email" size="md" className="" 
             onChange={(event)=>{
               setEmail(event.target.value);
             }}/>
-            <Input color="black" type="password" label="Password" size="lg"
+            <Input color="black" type="password" label="password" size="lg"
             onChange={(event)=>{
               setPassword(event.target.value);
             }} />
@@ -60,7 +67,7 @@ export default function Form() {
             </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button onClick={mostrarDatos} className="bg-[#ff5a60] text-white font-bold shadow-lg  hover:bg-[#f9787c] duration-100 ease-out"   fullWidth >
+            <Button onClick={addUser} className="bg-[#ff5a60] text-white font-bold shadow-lg  hover:bg-[#f9787c] duration-100 ease-out"   fullWidth >
               Sign In
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
