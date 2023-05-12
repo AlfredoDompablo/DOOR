@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Button } from "@material-tailwind/react";
-import Form from "./Form";
+import Form from './Form';
 import logo from '../assets/Logob.png'
 import logo2 from '../assets/Logow.png'
 // import logow from '../assets/LogoDoor_W.png'

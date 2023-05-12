@@ -23,7 +23,8 @@ export default function Form() {
   const [password, setPassword] = useState("");
 
   const addUser =()=>{
-    axios.post("http://localhost:3001/create",{
+    // axios.post("http://localhost:3001/create",{
+    axios.post("http://3.82.193.2:3001/create",{
       email:email,
       password:password
     }).then(()=>{
