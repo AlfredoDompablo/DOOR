@@ -24,7 +24,7 @@ export default function Form() {
 
   const addUser =()=>{
     // axios.post("http://localhost:3001/create",{
-    axios.post("http://3.82.193.2:3001/create",{
+    axios.post("https://door-ipn.ddns.net:3001/create",{
       email:email,
       password:password
     }).then(()=>{
