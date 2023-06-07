@@ -1,7 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import {BiUser } from "react-icons/bi";
 import axios from "axios";
+
 
 import {
   Button,
@@ -14,8 +16,22 @@ import {
   Input,
   Checkbox,
 } from "@material-tailwind/react";
+
  
 export default function Form() {
+
+  useEffect(() => {
+    axios.get("https://door-ipn.ddns.net:3001/public-ip")
+      .then(response => {
+        const publicIp = response.data.ip;
+        console.log(publicIp); // Aquí puedes usar la dirección IP pública en tu aplicación React
+      })
+      .catch(error => {
+        console.error("Error al obtener la dirección IP pública:", error);
+      });
+  }, []);
+
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
 
@@ -75,7 +91,7 @@ export default function Form() {
               Don&apos;t have an account?
               <Typography
                 as="a"
-                href="#signup"
+                href="/signup"
                 variant="small"
                 color="blue"
                 className="ml-1 font-bold"
