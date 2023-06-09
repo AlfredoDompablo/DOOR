@@ -24,7 +24,7 @@ const Navbar = () => {
             placeholder=""
             className="py-2.5 w-[20rem] rounded-full outline-0"
           />
-          <div className="grid grid-cols-3 justify-between absolute w-full pr-16 pl-6 font-semibold text-gray-600">
+          <div className="grid grid-cols-3 justify-between absolute w-full pr-16 p6l-6 font-semibold text-gray-600">
             <button className="w-full px-3">Anywhere</button>
             <button className="border-l border-x  ">Any week</button>
             <button className="w-full text-gray-600/60 pl-2">Add guest</button>
