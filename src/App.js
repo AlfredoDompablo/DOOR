@@ -8,19 +8,21 @@ import Carrusel from "./components/Carrusel";
 import PRUEBA from "./components/PRUEBA";
 import Cards from "./components/Cards";
 import Footer from "./components/Footer";
+import SingUp from "./components/SingUp";
 
 
 function App() {
   return <div className="">
     <Navbar />
-    <Filters />
+    {/* <Filters /> */}
 
     {/* <PRUEBA /> */}
     {/* <Carrusel/> */}
-
     {/* <Cards/> */}
 
-    <Footer/>
+    {/* <Footer/> */}
+
+    <SingUp/>
 
   </div>
 
