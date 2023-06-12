@@ -16,6 +16,7 @@ import {
   Input,
   Checkbox,
 } from "@material-tailwind/react";
+import {createUserRequest} from "../api/user.api"
 
 export default function Form() {
   // useEffect(() => {
@@ -125,9 +126,12 @@ export default function Form() {
                   return errors;
                 }}
                 onSubmit={(values, { setSubmitting }) => {
-                  setTimeout(() => {
+                  setTimeout(async () => {
                     //alert(JSON.stringify(values, null, 2));
-                    console.log(values);
+                    try {
+                      const response = await createUserRequest(values);
+                      console.log(response);
+                    } catch (error) {}
                     setSubmitting(false);
                   }, 400);
                 }}
@@ -172,9 +176,9 @@ export default function Form() {
                       // onClick={addUser}
                       className="bg-[#ff5a60] text-white font-bold shadow-lg  hover:bg-[#f9787c] duration-100 ease-out"
                       type="submit"
-                       disabled={isSubmitting}
+                      disabled={isSubmitting}
                       fullWidth
-                      >
+                    >
                       Sign In
                     </Button>
                   </form>
