@@ -1,12 +1,12 @@
 import React from 'react'
 // import { Button } from "@material-tailwind/react";
-import Form from './form';
 import logo from '../assets/Logob.png'
 import logo2 from '../assets/Logow.png'
 // import logow from '../assets/LogoDoor_W.png'
 // import { BiWorld, BiUser } from "react-icons/bi";
 import { BiWorld } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
+import Form from './Form';
 
 
 const Navbar = () => {

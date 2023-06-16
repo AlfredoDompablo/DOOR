@@ -11,6 +11,10 @@ import Footer from "./components/Footer";
 import SingUp from "./pages/SingUp";
 import PageLugar from "./pages/PageLugar";
 import Carrusel from "./components/Carrusel";
+import NuestraHistoria from "./pages/NuestraHistoria";
+import card from "./components/card";
+import Privacidad from "./pages/Privacidad";
+import Fundadores from "./pages/Fundadores";
 
 
 function App() {
@@ -21,8 +25,13 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/signup" element={<SingUp/>} />
+      <Route path="/nuestrahistoria" element={<NuestraHistoria/>}/>
       <Route path="/pagelugar" element={<Carrusel/>} />
       <Route path="*" element={<NotFound/>} />
+      <Route path="/card" element={<card/>} />
+      <Route path="/privacidad" element={<Privacidad/>} />
+      <Route path="/fundadores" element={<Fundadores/>} />
+
     </Routes>
     
     {/*cards*/}

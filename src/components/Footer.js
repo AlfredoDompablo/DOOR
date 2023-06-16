@@ -4,17 +4,27 @@ import { Typography } from "@material-tailwind/react";
 const SITEMAP = [
     {
         title: "COMPAÑIA",
-        links: ["Nuestra Historia", "Privacidad", "Terminos y condiciones"],
+        links: [
+            { label: "Sobre nosotros", url: "../NuestraHistoria" },
+            { label: "Terminos y condiciones", url: "../Privacidad" },
+        ]
     },
     {
         title: "CENTRO DE AYUDA",
-        links: ["Discord", "Guias de viajes"],
+        links: [
+            { label: "Discord", url: "#" },
+            { label: "Guias de viajes", url: "#" }
+        ]
     },
     {
         title: "BLOG",
-        links: ["Inversores", "Fundadores"],
-    },
+        links: [
+            { label: "Inversores", url: "#" },
+            { label: "Fundadores", url: "../Fundadores" }
+        ]
+    }
 ];
+
 const currentYear = new Date().getFullYear();
 
 
@@ -38,10 +48,10 @@ const Footer = () => {
                                     {links.map((link, key) => (
                                         <Typography key={key} as="li" color="blue-gray" className="font-normal">
                                             <a
-                                                href="#"
+                                                href={link.url}
                                                 className="inline-block py-1 pr-2 transition-transform hover:scale-105"
                                             >
-                                                {link}
+                                                {link.label}
                                             </a>
                                         </Typography>
                                     ))}
@@ -54,7 +64,7 @@ const Footer = () => {
                             variant="small"
                             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
                         >
-                            &copy; {currentYear} <a href=""> DoOr</a>. All Rights Reserved. 
+                            &copy; {currentYear} <a href=""> DoOr</a>. All Rights Reserved.
                         </Typography>
                         <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
                             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
