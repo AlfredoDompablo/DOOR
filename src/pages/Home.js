@@ -1,18 +1,13 @@
-import {React, useEffect} from 'react'
+import {React} from 'react'
 import Navbar from "../components/Navbar";
 import Filters from "../components/Filters";
-import Card from "../components/card";
-import {getUserRequest} from "../api/user.api"
+//import Card from "../components/card";
+
+//import Footer from '../components/Footer';
 
 const Home = () => {
 
-  useEffect(() =>{
-    async function loadUsers() {
-      const  response = await getUserRequest();
-      console.log(response);
-    }
-    loadUsers();
-  },[])
+
 
   return (
     <div>
@@ -21,7 +16,9 @@ const Home = () => {
         {/* filters */}
         <Filters />
     
-        <Card/>
+        {/* <Card/> */}
+
+        {/* <Footer/> */}
 
         
     </div>

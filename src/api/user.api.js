@@ -5,13 +5,16 @@ import axios from 'axios';
 // }
 
 export const getUserRequest = async () => {
-    await axios.get('https://door-ipn.ddns.net:3001/users')
+    // await axios.get('https://door-ipn.ddns.net:3001/users');
+    const response = await axios.get('https://door-ipn.ddns.net:3001/users');
+    return response.data; // Devuelve los datos de la respuesta
 }
 
 export const createUserRequest = async (user) => {
     console.log(user);
     console.log("Estos son los datos")
-    alert(JSON.stringify(user, null, 2));
+    //alert(JSON.stringify(user, null, 2));
     await axios.post('https://door-ipn.ddns.net:3001/setuser',user)
     console.log("Enviado")
 }
+
