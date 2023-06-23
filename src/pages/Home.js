@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Filters from "../components/Filters";
 //import Card from "../components/card";
 
-//import Footer from '../components/Footer';
+import Footer from '../components/Footer';
 
 const Home = () => {
 
@@ -18,7 +18,7 @@ const Home = () => {
     
         {/* <Card/> */}
 
-        {/* <Footer/> */}
+        <Footer/>
 
         
     </div>

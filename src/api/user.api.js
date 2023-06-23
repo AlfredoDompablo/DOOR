@@ -12,7 +12,7 @@ export const getUserRequest = async () => {
 
 export const createUserRequest = async (user) => {
     console.log(user);
-    console.log("Estos son los datos")
+    // console.log("Estos son los datos")
     //alert(JSON.stringify(user, null, 2));
     await axios.post('https://door-ipn.ddns.net:3001/setuser',user)
     console.log("Enviado")
